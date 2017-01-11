@@ -1,0 +1,22 @@
+{
+  "name": "test_express",
+  "version": "1.0.0",
+  "description": "a hello world project for express.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test test_express"
+  },
+  "author": "leaf4monkey",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "core-js": "^2.4.1",
+    "ejs": "^2.5.1",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "serve-favicon": "^2.3.0",
+    "winston": "^2.2.0"
+  }
+}
