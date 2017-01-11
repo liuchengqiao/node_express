@@ -4,7 +4,8 @@
   "description": "a hello world project for express.",
   "main": "app.js",
   "scripts": {
-    "test": "npm test test_express"
+    "test": "npm test test_express",
+    "start": "npm install && node app.js"
   },
   "author": "leaf4monkey",
   "license": "MIT",
