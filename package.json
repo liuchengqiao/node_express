@@ -4,8 +4,8 @@
   "description": "a hello world project for express.",
   "main": "app.js",
   "scripts": {
-    "test": "npm test test_express",
-    "start": "npm install && node app.js"
+    "test": "npm test --registry https://registry.npm.taobao.org test_express",
+    "start": "npm install --registry https://registry.npm.taobao.org && node app.js"
   },
   "author": "leaf4monkey",
   "license": "MIT",
