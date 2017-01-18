@@ -9,23 +9,24 @@ var fs = require('fs')
 
 /* GET home page. */
 router.get('/', function (req, res) {
-    fs.readFile('logs/all-logs.log', function (err, data) {
-        if (err) {
-            var list = ['file not find']
-            res.render('index',
-                {
-                    title: 'Log Server',
-                    logs: list
-                });
-        } else {
-            var list = data.toString().split('\n');
-            res.render('index',
-                {
-                    title: 'Log Server',
-                    logs: list
-                });
-        }
-    });
+    res.send('GET ' + new Date());
+    //fs.readFile('logs/all-logs.log', function (err, data) {
+    //    if (err) {
+    //        var list = ['file not find']
+    //        res.render('index',
+    //            {
+    //                title: 'Log Server',
+    //                logs: list
+    //            });
+    //    } else {
+    //        var list = data.toString().split('\n');
+    //        res.render('index',
+    //            {
+    //                title: 'Log Server',
+    //                logs: list
+    //            });
+    //    }
+    //});
 });
 var winston = require('winston');
 var logger = new winston.Logger({
@@ -49,9 +50,8 @@ var logger = new winston.Logger({
     exitOnError: false
 });
 router.post('/', function (req, res) {
-    logger.log('info', req.body)
     console.log('info:', req.content, req.body)
     // req.body.log req.body.platform req.body.stack
-    res.send('1');
+    res.send('POST ' + new Date());
 });
 module.exports = router;
