@@ -28,6 +28,15 @@ router.get('/', function (req, res) {
     //    }
     //});
 });
+
+router.get('/1', function (req, res) {
+    res.send('this is route 1');
+});
+
+router.get('/2', function (req, res) {
+    res.send('this is route 2');
+});
+
 var winston = require('winston');
 var logger = new winston.Logger({
     transports: [
